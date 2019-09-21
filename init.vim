@@ -235,7 +235,7 @@ map <C-_> :call NERDComment(0,"toggle")<C-m>
 let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/UltiSnips']
 let g:UltiSnipsEditSplit="vertical"
 
 " }}}

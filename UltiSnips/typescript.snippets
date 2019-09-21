@@ -1,0 +1,57 @@
+snippet cmp
+import React from 'react'
+
+export interface Props {
+	
+}
+
+class $1 extends React.PureComponent<Props> {
+	render() {
+		return (
+			null;
+		)
+	}
+}
+
+export default $1;
+
+endsnippet
+
+snippet cmps
+import React from 'react'
+import Styled from 'styled';
+
+import defaultStyles from './$1.scss';
+
+export interface Props {
+	styles: typeof defaultStyles;
+}
+
+class $1 extends React.PureComponent<Props> {
+	render() {
+		const { styles } = this.props;
+
+		return (
+			null;
+		)
+	}
+}
+
+export default Styled(defaultStyles)($1);
+
+endsnippet
+
+snippet Query
+<Query<$1, $1Variables>
+	query={}
+	variables={{ }}
+	>
+	{({ loading, data, error }) => (
+		<LoadingProgress loading={loading} >
+			<ErrorPage error={error} >
+
+			</ErrorPage>
+		</LoadingProgress>
+	)}
+</Query>
+endsnippet
