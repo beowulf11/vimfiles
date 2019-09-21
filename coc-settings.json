@@ -1,0 +1,12 @@
+{
+  "suggest.echodocSupport": true,
+  "suggest.maxCompleteItemCount": 20,
+  "diagnostic.errorSign": "!!",
+  "diagnostic.warningSign": "!-",
+  "diagnostic.infoSign": "?",
+  "tslint.autoFixOnSave": false,
+  "prettier.tslintIntegration": true,
+  "tslint.configFile": "/data/dev/js/tslint.json",
+  "coc.preferences.formatOnSaveFiletypes": ["javascript", "javascriptreact", "typescript", "typescriptreact", "graphql", "css", "scss"],
+  "java.errors.incompleteClasspath.severity": "ignore"
+}
