@@ -37,6 +37,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'bronson/vim-visual-star-search'
     Plug 'davidhalter/jedi-vim'
     Plug 'ajmwagar/vim-deus'
+    Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 "}}}
@@ -140,10 +141,6 @@ nnoremap <leader>ev :sp $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>no :nohl<CR>
 nnoremap <leader>y :tabnew<cr>
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 nnoremap [q :cprev<CR>
 nnoremap ]q :cnext<CR>
 nnoremap [Q :cfirst<CR>
@@ -285,6 +282,19 @@ nmap <silent> <leader>e <Plug>(coc-diagnostic-next)
 " ILLUMINATE {{{
 
 let g:Illuminate_ftblacklist = ['nerdtree']
+
+" }}}
+
+" TMUX {{{
+
+let g:tmux_navigator_no_mappings = 1
+let g:tmux_navigator_disable_when_zoomed = 1
+
+nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
+"nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
 
 " }}}
 
