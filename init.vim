@@ -38,6 +38,8 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'davidhalter/jedi-vim'
     Plug 'ajmwagar/vim-deus'
     Plug 'christoomey/vim-tmux-navigator'
+    Plug 'udalov/kotlin-vim'
+    Plug 'simnalamburt/vim-mundo'
 call plug#end()
 
 "}}}
@@ -147,6 +149,7 @@ nnoremap [Q :cfirst<CR>
 nnoremap ]Q :clast<CR>
 nnoremap <leader>n :let @" = expand("%")<CR>
 nnoremap <leader>m :mark z<CR>:tabedit %<CR>`zzz
+nnoremap <leader>h :MundoToggle<CR>
 
 " }}}
 
@@ -230,8 +233,8 @@ map <C-_> :call NERDComment(0,"toggle")<C-m>
 " ULTISNIPS {{{
 
 let g:UltiSnipsExpandTrigger="<c-l>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+"let g:UltiSnipsJumpForwardTrigger="<tab>"
+"let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/UltiSnips']
 let g:UltiSnipsEditSplit="vertical"
 
@@ -269,6 +272,7 @@ inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<CR>"
